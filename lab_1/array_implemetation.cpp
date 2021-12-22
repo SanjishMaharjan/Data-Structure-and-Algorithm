@@ -2,16 +2,6 @@
 using namespace std;
 #define Size 100
 int arr1[Size], a, n, i, pos, up;
-void input()
-{
-    cout << "Enter the size of array: " << endl;
-    cin >> n;
-    cout << "Enter the elements of array: " << endl;
-    for (i = 0; i < n; i++)
-    {
-        cin >> arr1[i];
-    }
-}
 void traverse_array()
 {
     for (i = 0; i < n; i++)
@@ -90,6 +80,13 @@ void merge_array()
 int main()
 {
     int c;
+    cout << "Enter the size of array: " << endl;
+    cin >> n;
+    cout << "Enter the elements of array: " << endl;
+    for (i = 0; i < n; i++)
+    {
+        cin >> arr1[i];
+    }
     cout << "Select the operation" << endl
          << "1. Insert" << endl
          << "2. Delete" << endl
@@ -100,23 +97,22 @@ int main()
     switch (c)
     {
     case 1:
-        input();
+
         insert_array();
         break;
     case 2:
-        input();
+
         delete_array();
         break;
     case 3:
-        input();
+
         traverse_array();
         break;
     case 4:
-        input();
+
         update_array();
         break;
     case 5:
-        input();
         merge_array();
         break;
     default:
